@@ -184,12 +184,12 @@ class AdvancedTimer extends Component {
         
         {
                 (this.state.status!==null) && (
-                    <div className="display-countdown">
+                    
                         
-                        <div className="display-countdown-time">
+                        <div className="calculator-screen-1">
                             {time.getTime(this.state.time)}
                         </div>
-                    </div>
+                    
                 )
             }
         {this.state.status===null &&
@@ -216,7 +216,7 @@ class AdvancedTimer extends Component {
                 </button>
                 <button className="btn btn-danger btn-lg btn-block"
                         onClick={this.resetHandler}>
-                        RESET
+                        Reset
                     </button>
                     </>
             }
@@ -224,21 +224,21 @@ class AdvancedTimer extends Component {
                 <div>
                     {
                         this.state.status === 'started' &&
-                        <button className="btn btn-danger btn-lg"
+                        <button className="btn btn-primary btn-lg btn-block"
                             onClick={this.stopHandler}>
                             Stop
                         </button>
                     }
                     {
                         this.state.status === 'stopped' &&
-                        <button className="btn btn-success btn-lg"
+                        <button className="btn btn-success btn-lg btn-block"
                             onClick={this.resumeHandler}>
                             RESUME
                         </button>
                     }
-                    <button className="btn btn-danger btn-lg"
+                    <button className="btn btn-danger btn-lg btn-block"
                         onClick={this.resetHandler}>
-                        RESET
+                        Reset
                     </button>
                 </div>
             }
